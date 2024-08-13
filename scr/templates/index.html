@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Sistema de Gestión de Tareas</h1>
+    <div id="task-list">
+        <!-- Iterar sobre la lista de tareas y mostrar cada tarea -->
+        {% for task in tasks %}
+            <div class="task-container" data-id="{{ task.id }}">
+                <input  type="checkbox" class="task-checkbox" {% if task.completed %}checked{% endif %}>
+                <span class="task-text">{{ task.text }}</span>
+                <button class="edit-btn">Editar</button>
+                <button class="delete-btn">Eliminar</button>
+            </div>
+        {% endfor %}
+    </div>
+    <form class="form-container" id="task-form">
+        <input type="text" id="task-input" placeholder="Nueva tarea">
+        <button type="submit" class="add-btn">Agregar tarea</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

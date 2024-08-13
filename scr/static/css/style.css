@@ -1,0 +1,98 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilos para los divs de tareas */
+.task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(167, 163, 163, 0.233);
+    border-color: rgba(0, 0, 0, 0.527);
+}
+
+
+/* Estilos para el texto de la tarea */
+.task-text {
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+/* Estilos para el botón de editar */
+.edit-btn {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de eliminar */
+.delete-btn {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de agregar */
+.add-btn {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container{
+    text-align: center;
+}
+
+/* Estilos para el checkbox */
+.task-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Tamaño del checkbox */
+    height: 20px;
+    border-radius: 50%; /* Hacer el checkbox redondo */
+    border: 2px solid #ffffff; /* Color del borde */
+    outline: none; /* Quitar el contorno predeterminado */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el checkbox */
+}
+
+/* Estilos para el checkbox cuando está seleccionado */
+.task-checkbox:checked {
+    background-color: green; /* Cambiar el color de fondo cuando está seleccionado */
+    border-color: green; /* Cambiar el color del borde cuando está seleccionado */
+}
+
+/* Estilos para el input de agregar tarea */
+#task-input {
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid #ccc; /* Borde sólido de color gris */
+    border-radius: 20px; /* Bordes redondeados */
+    outline: none; /* Quitar contorno al enfocar */
+    transition: border-color 0.3s; /* Transición suave para el color del borde */
+}
+
+/* Estilos cuando el input está enfocado */
+#task-input:focus {
+    border-color: dodgerblue; /* Cambiar color del borde al enfocar */
+}
